@@ -18,12 +18,9 @@
     "sass-build": "node-sass src/app.scss dist/app.css"
   },
   "keywords": [
-    "todo",
-    "chat",
-    "natural",
-    "language",
-    "nlp",
-    "bot"
+    "angular",
+    "typescript",
+    "meetup"
   ],
   "author": "whenther",
   "license": "MIT",
@@ -53,7 +50,6 @@
     "stringify": "^5.1.0",
     "ts-node": "^0.7.3",
     "tsify": "^0.16.0",
-    "typescript": "^2.0.3",
-    "typings": "^1.0.4"
+    "typescript": "^2.0.3"
   }
 }
