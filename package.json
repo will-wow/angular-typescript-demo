@@ -28,12 +28,16 @@
   "author": "whenther",
   "license": "MIT",
   "dependencies": {
-    "angular": "^1.5.6",
-    "angular-route": "^1.5.6",
-    "lodash": "^4.13.1",
-    "natural-language-commander": "0.1.2"
+    "@types/angular": "^1.5.16",
+    "@types/jquery": "^2.0.33",
+    "@types/lodash": "^4.14.37",
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "lodash": "^4.13.1"
   },
   "devDependencies": {
+    "@types/chai": "^3.4.34",
+    "@types/mocha": "^2.2.32",
     "babel-preset-es2015": "^6.9.0",
     "babelify": "^7.3.0",
     "browserify": "^13.0.1",
@@ -49,7 +53,7 @@
     "stringify": "^5.1.0",
     "ts-node": "^0.7.3",
     "tsify": "^0.16.0",
-    "typescript": "^1.9.0-dev.20160606-1.0",
+    "typescript": "^2.0.3",
     "typings": "^1.0.4"
   }
 }
