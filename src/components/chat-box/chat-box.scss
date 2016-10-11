@@ -1,0 +1,24 @@
+chat-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  padding: 20px;
+  border: 1px solid gray;
+}
+
+.chat-box__message {
+  width: 100%;
+  padding: 5px 0;
+  text-align: left;
+}
+
+.chat-box__message--bot {
+  color: cornflowerblue;
+}
+
+.chat-box__message--user {
+  text-align: left;
+}

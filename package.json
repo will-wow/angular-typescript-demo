@@ -1,0 +1,55 @@
+{
+  "name": "todo-chat",
+  "version": "0.1.1",
+  "description": "A simple todo chat app, using natural-language-commander",
+  "main": "js/app.js",
+  "scripts": {
+    "start": "concurrently \"npm run sass-dev\" \"npm run budo\"",
+    "build": "npm run browserify && npm run sass-build",
+    "test": "mocha --opts ./mocha.opts",
+    "deploy": "git subtree push --prefix dist origin gh-pages",
+    "prestart": "npm run clean && npm run copy",
+    "prebuild": "npm run clean && npm run copy",
+    "clean": "rimraf dist",
+    "copy": "mkdirp dist && ncp src/index.html dist/index.html",
+    "budo": "budo src/app.ts:app.js --live --open --dir ./dist -- -p [ tsify ] -t [ babelify --presets [ es2015 ] --extensions .ts ] -t [ stringify --extensions [ .html ] ]",
+    "browserify": "browserify src/app.ts -p [ tsify ] -t [ babelify --presets [ es2015 ] --extensions .ts .ts ]  -t [ stringify --extensions [ .html ] ] -o dist/app.js",
+    "sass-dev": "npm run sass-build && node-sass src/app.scss dist/app.css --watch --include-path src",
+    "sass-build": "node-sass src/app.scss dist/app.css"
+  },
+  "keywords": [
+    "todo",
+    "chat",
+    "natural",
+    "language",
+    "nlp",
+    "bot"
+  ],
+  "author": "whenther",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.5.6",
+    "angular-route": "^1.5.6",
+    "lodash": "^4.13.1",
+    "natural-language-commander": "0.1.2"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1",
+    "budo": "^8.3.0",
+    "chai": "^3.5.0",
+    "concurrently": "^2.1.0",
+    "http-server": "^0.9.0",
+    "mkdirp": "^0.5.1",
+    "mocha": "^2.5.1",
+    "ncp": "^2.0.0",
+    "node-sass": "^3.7.0",
+    "rimraf": "^2.5.2",
+    "stringify": "^5.1.0",
+    "ts-node": "^0.7.3",
+    "tsify": "^0.16.0",
+    "typescript": "^1.9.0-dev.20160606-1.0",
+    "typings": "^1.0.4"
+  }
+}

@@ -1,0 +1,16 @@
+<div class="container todo-chat flex-column">
+  <div class="text-center">
+    <h1>Todo Chat</h1>
+
+    <h4>A simple todo chat app, using <a href="https://github.com/whenther/natural-language-commander">natural-language-commander</a></h4> 
+  </div>
+
+  <div class="flex-fill flex-column">
+    <chat-box messages="$ctrl.messages" class="flex-fill"></chat-box>
+    <entry-box on-send="$ctrl.onSend(command)"></entry-box>
+  </div>
+  
+</div>
+
+
+

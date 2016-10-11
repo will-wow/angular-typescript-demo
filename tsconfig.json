@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "rootDir": "src",
+    "outDir": "dist",
+    "jsx": "preserve"
+  },
+  "exclude": [
+    "node_modules",
+    "node_modules_unix",
+    ".vscode"
+  ]
+}

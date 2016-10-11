@@ -1,0 +1,5 @@
+<div ng-repeat="message in $ctrl.messages"
+     class="chat-box__message"
+     ng-class="{ 'chat-box__message--bot': message.fromBot, 'chat-box__message--user': message.fromUser }">
+  {{ message.text }}
+</div>
