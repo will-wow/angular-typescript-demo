@@ -1,5 +1,6 @@
 <ul>
   <li ng-repeat="pet in $ctrl.pets">
-    {{ pet.type }}: {{ pet.speak() }}
+    <cat ng-if="pet === 'cat'"></cat>
+    <dog ng-if="pet === 'dog'"></dog>
   </li>
 </ul>

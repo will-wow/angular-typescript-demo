@@ -2,7 +2,7 @@ import lodash = require('lodash');
 
 import IPetController from '../pet/IPetController';
 
-export class CatController implements IPetController {
+export class DogController implements IPetController {
   public type: string;
 
   constructor(
@@ -10,17 +10,17 @@ export class CatController implements IPetController {
   ) {
     'ngInject';
     
-    this.type = 'cat';
+    this.type = 'dog';
   }
   
   public speak(): string {
-    return 'Meow';
+    return 'Woof';
   }
 }
 
-const catComponent: ng.IComponentOptions = {
+const dogComponent: ng.IComponentOptions = {
   template: require('../pet/petComponent.html'),
-  controller: CatController
+  controller: DogController
 };
 
-export default catComponent;
+export default dogComponent;

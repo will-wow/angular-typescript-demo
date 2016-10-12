@@ -13,10 +13,6 @@ export class PetController {
     
     this.pets = Pets.list;
   }
-  
-  public speak(): string {
-    return 'Meow';
-  }
 }
 
 const petComponent: ng.IComponentOptions = {
