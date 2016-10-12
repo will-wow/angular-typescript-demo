@@ -3,6 +3,11 @@
   "version": "0.0.1",
   "description": "A demo Angular 1 TypeScript project for the October 2016 Santa Barbara Angular Meetup",
   "main": "js/app.js",
+  "homepage": "https://whenther.github.io/angular-typescript-demo/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/whenther/angular-typescript-demo"
+  },
   "scripts": {
     "start": "concurrently \"npm run sass-dev\" \"npm run budo\"",
     "build": "npm run browserify && npm run sass-build",
