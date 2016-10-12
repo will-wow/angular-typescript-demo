@@ -1,11 +1,5 @@
 import lodash = require('lodash');
 
-export interface IMessage {
-  text: string;
-  fromUser?: boolean;
-  fromBot?: boolean;
-}
-
 export class CatController {
   public name: string;
 
