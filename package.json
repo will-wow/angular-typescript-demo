@@ -15,7 +15,7 @@
     "budo": "budo src/app.ts:app.js --live --open --dir ./dist -- -p [ tsify ] -t [ babelify --presets [ es2015 ] --extensions .ts ] -t [ stringify --extensions [ .html ] ]",
     "browserify": "browserify src/app.ts -p [ tsify ] -t [ babelify --presets [ es2015 ] --extensions .ts .ts ]  -t [ stringify --extensions [ .html ] ] -o dist/app.js",
     "sass-dev": "npm run sass-build && node-sass src/app.scss dist/app.css --watch --include-path src",
-    "sass-build": "node-sass src/app.scss dist/app.css"
+    "sass-build": "node-sass --include-path node_modules/foundation-sites/scss src/app.scss dist/app.css"
   },
   "keywords": [
     "angular",
