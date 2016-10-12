@@ -8,7 +8,7 @@ class Pets {
   /** Generates the pets list. */
   constructor() {
     const cats = this.getRandomPets('cat');
-    const dogs = this.getRandomPets('cat');
+    const dogs = this.getRandomPets('dog');
 
     this.petsList = _
       .chain(cats)

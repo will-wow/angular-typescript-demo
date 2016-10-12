@@ -7,7 +7,8 @@
     "noImplicitAny": false,
     "rootDir": "src",
     "outDir": "dist",
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "types": ["node"]
   },
   "exclude": [
     "node_modules",

@@ -3,15 +3,15 @@ import lodash = require('lodash');
 import Pets from '../../services/Pets';
 
 export class PetController {
-  public pets: string[];
+  public list: string[];
 
   constructor(
     private $scope: ng.IScope,
-    private Pets: Pets
+    private pets: Pets
   ) {
     'ngInject';
     
-    this.pets = Pets.list;
+    this.list = pets.list;
   }
 }
 
