@@ -15,14 +15,16 @@ development
 ```
 npm start
 ```
-Then open the served app at `localhost:3000`
+Then open the served app at `localhost:9966`
 
-deploy to GitHub-Pages
+production
 ----------------------
 ```
 npm run build
-npm run deploy
 ```
+GitHub pages will automatically pick up the built pages from the `docs` dir.
+
+That does mean the built files are under source control, which is weird.
 
 testing
 -------
