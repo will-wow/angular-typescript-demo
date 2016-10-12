@@ -3,6 +3,8 @@ angular-typescript-demo
 
 A demo Angular 1 TypeScript app, for the [2016-10-13 Angular JS
 Santa Barbara Meetup](https://www.meetup.com/AngularJS-Santa-Barbara/events/233258540/)
+ 
+See a demo [here](https://whenther.github.io/angular-typescript-demo/)
 
 setup
 -----
