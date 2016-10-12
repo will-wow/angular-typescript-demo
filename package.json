@@ -7,15 +7,14 @@
     "start": "concurrently \"npm run sass-dev\" \"npm run budo\"",
     "build": "npm run browserify && npm run sass-build",
     "test": "mocha --opts ./mocha.opts",
-    "deploy": "git subtree push --prefix dist origin gh-pages",
     "prestart": "npm run clean && npm run copy",
     "prebuild": "npm run clean && npm run copy",
-    "clean": "rimraf dist",
-    "copy": "mkdirp dist && ncp src/index.html dist/index.html",
-    "budo": "budo src/app.ts:app.js --live --open --dir ./dist -- -p [ tsify ] -t [ babelify --presets [ es2015 ] --extensions .ts ] -t [ stringify --extensions [ .html ] ]",
-    "browserify": "browserify src/app.ts -p [ tsify ] -t [ babelify --presets [ es2015 ] --extensions .ts .ts ]  -t [ stringify --extensions [ .html ] ] -o dist/app.js",
-    "sass-dev": "npm run sass-build && node-sass src/app.scss dist/app.css --watch --include-path src",
-    "sass-build": "node-sass --include-path node_modules/foundation-sites/scss src/app.scss dist/app.css"
+    "clean": "rimraf docs",
+    "copy": "mkdirp docs && ncp src/index.html docs/index.html",
+    "budo": "budo src/app.ts:app.js --live --open --dir ./docs -- -p [ tsify ] -t [ babelify --presets [ es2015 ] --extensions .ts ] -t [ stringify --extensions [ .html ] ]",
+    "browserify": "browserify src/app.ts -p [ tsify ] -t [ babelify --presets [ es2015 ] --extensions .ts .ts ]  -t [ stringify --extensions [ .html ] ] -o docs/app.js",
+    "sass-dev": "npm run sass-build && node-sass src/app.scss docs/app.css --watch --include-path src",
+    "sass-build": "node-sass --include-path node_modules/foundation-sites/scss src/app.scss docs/app.css"
   },
   "keywords": [
     "angular",
