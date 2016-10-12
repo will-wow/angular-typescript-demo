@@ -1,5 +1,4 @@
 import angular = require('angular');
-import NLC = require('natural-language-commander');
 import components from './components';
 
 const app = angular.module('app', [
