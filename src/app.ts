@@ -6,7 +6,14 @@ const app = angular.module('app', [
   components,
   services
 ]);
-console.log('foo');
+
+const mathFactory = {
+  addOne: (n) => {
+    return n + 1;
+  }
+};
+
+// register the factory here.
 
 angular.element(document).ready((): void => {
   angular.bootstrap(document, [app.name]);

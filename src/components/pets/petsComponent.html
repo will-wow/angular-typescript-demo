@@ -1,6 +1,6 @@
 <div class="row text-center">
-  <h1>Pet Lister</h1>
-  <h5>"It lists some pets!"</h5>
+  <h1>{{ $ctrl.title }}</h1>
+  <h5>{{ $ctrl.subtitle() }}</h5>
   <hr/>
   <div>
     <div ng-repeat="pet in $ctrl.list track by $index">
