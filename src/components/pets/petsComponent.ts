@@ -1,4 +1,4 @@
-import lodash = require('lodash');
+import _ = require('lodash');
 
 import Pets from '../../services/Pets';
 
@@ -6,12 +6,14 @@ export class PetController {
   public list: string[];
 
   constructor(
-    private $scope: ng.IScope,
-    private pets: Pets
+    $scope: ng.IScope,
+    pets: Pets
   ) {
     'ngInject';
     
-    this.list = pets.list;
+    $scope.$watch(() => pets.list, (list) => {
+      this.list = list;
+    });
   }
 }
 

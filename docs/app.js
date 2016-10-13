@@ -48867,11 +48867,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var PetController = function PetController($scope, pets) {
     'ngInject';
 
+    var _this = this;
+
     _classCallCheck(this, PetController);
 
-    this.$scope = $scope;
-    this.pets = pets;
-    this.list = pets.list;
+    $scope.$watch(function () {
+        return pets.list;
+    }, function (list) {
+        _this.list = list;
+    });
 };
 
 exports.PetController = PetController;
@@ -48894,12 +48898,25 @@ var _ = require('lodash');
 
 var Pets = function () {
     /** Generates the pets list. */
-    function Pets() {
+    function Pets($interval) {
+        'ngInject';
+        /**
+         * Update the pets list.
+         */
+
+        var _this = this;
+
         _classCallCheck(this, Pets);
 
-        var cats = this.getRandomPets('cat');
-        var dogs = this.getRandomPets('dog');
-        this.petsList = _.chain(cats).concat(dogs).shuffle().value();
+        this.makeList = function () {
+            var cats = _this.getRandomPets('cat');
+            var dogs = _this.getRandomPets('dog');
+            _this.petsList = _.chain(cats).concat(dogs).shuffle().value();
+        };
+        // Set up the list.
+        this.makeList();
+        // Update it every second.
+        $interval(this.makeList, 1000);
     }
     /**
      * The random list of pets.

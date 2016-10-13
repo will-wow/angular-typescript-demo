@@ -6,15 +6,15 @@ class Pets {
   private petsList: string[];
   
   /** Generates the pets list. */
-  constructor() {
-    const cats = this.getRandomPets('cat');
-    const dogs = this.getRandomPets('dog');
-
-    this.petsList = _
-      .chain(cats)
-      .concat(dogs)
-      .shuffle()
-      .value();
+  constructor(
+   $interval: ng.IIntervalService
+  ) {
+    'ngInject';
+    
+    // Set up the list.
+    this.makeList();
+    // Update it every second.
+    $interval(this.makeList, 1000); 
   }
   
   /**
@@ -24,6 +24,20 @@ class Pets {
     return this.petsList;
   }
   
+  /**
+   * Update the pets list.
+   */
+  private makeList = (): void => {
+    const cats = this.getRandomPets('cat');
+    const dogs = this.getRandomPets('dog');
+
+    this.petsList = _
+      .chain(cats)
+      .concat(dogs)
+      .shuffle()
+      .value();
+  }
+
   /** 
    * Randomly generate some pets.
    * @param type - The type of pet to duplicate.
