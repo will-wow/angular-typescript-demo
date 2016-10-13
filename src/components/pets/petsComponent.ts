@@ -5,7 +5,7 @@ import Pets from '../../services/Pets';
 /**
  * Displays the list of pets.
  */
-export class PetController {
+export class PetsController {
   /** The pets list. */
   public list: string[];
   /** The application title. */
@@ -33,7 +33,7 @@ export class PetController {
 }
 
 // Old way
-function PetsController(
+function OldPetsController(
   $scope,
   pets
 ) {
@@ -53,7 +53,7 @@ function PetsController(
 
 const petComponent: ng.IComponentOptions = {
   template: require('./petsComponent.html'),
-  controller: PetController
+  controller: PetsController
 };
 
 export default petComponent;
