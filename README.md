@@ -6,7 +6,7 @@ Santa Barbara Meetup](https://www.meetup.com/AngularJS-Santa-Barbara/events/2332
  
 See a demo [here](https://whenther.github.io/angular-typescript-demo/)
 
-Associated slide deck [here](https://docs.google.com/presentation/d/1zYEvIgKL_lT_uLBDSbEcP0EpjcgCZknqm4FjGQPQgAc/edit?usp=sharing)
+Associated slide deck [here](https://docs.google.com/presentation/d/1J9Xr3Zgz9npQscvyr1jLHVYrslAxd29LPjxPuxzWffQ/edit?usp=sharing)
 
 setup
 -----
